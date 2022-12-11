@@ -180,15 +180,15 @@ textarea {
 
 @font-face {
   font-family: TTLakesMedium;
-  src: url(/1.6/font/TTLakes-Medium.woff);
+  src: url(./font/TTLakes-Medium.woff);
 }
 @font-face {
   font-family: TTLakesBold;
-  src: url(/1.6/font/TTLakes-Bold.woff);
+  src: url(/font/TTLakes-Bold.woff);
 }
 @font-face {
   font-family: TTLakesRegular;
-  src: url(/1.6/font/TTLakes-Regular.woff);
+  src: url(font/TTLakes-Regular.woff);
 }
 body {
   background-color: #f8f8f8;
