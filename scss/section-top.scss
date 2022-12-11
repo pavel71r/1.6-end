@@ -1,0 +1,92 @@
+.section-top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  padding-bottom: 16px;
+  width: 320px;
+  margin: 0 auto;
+
+  &__text {
+    width: 288px;
+    height: 90px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    font-family: TTLakesRegular;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: 0.3s;
+  }
+  &-text-open {
+    height: 157px;
+  }
+  &__text-button {
+    margin-left: 16px;
+  }
+  &__image {
+    width: 320px;
+    height: 184px;
+  }
+  &__img {
+    max-width: 100%;
+  }
+  &__button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  &-expand-deg {
+    transform: rotate(180deg);
+  }
+}
+@media (min-width: 768px) {
+  .section-top {
+    flex-direction: row;
+    gap: 0 48px;
+    width: 768px;
+
+    &__text {
+      width: 312px;
+      height: 157px;
+      margin-bottom: 10px;
+      line-height: 20px;
+    }
+    &-text-open {
+      height: 220px;
+    }
+    &__text-button {
+      margin-left: 24px;
+    }
+    &__image {
+      width: 360px;
+      height: 207px;
+    }
+    &__img {
+      border-radius: 10px;
+    }
+  }
+}
+@media (min-width: 1120px) {
+  .section-top {
+    gap: 0 36px;
+    width: 1120px;
+
+    &__text {
+      width: 490px;
+      height: 160px;
+    }
+    &-text-open {
+      height: 255px;
+    }
+    &__text-button {
+      margin-left: 34px;
+    }
+    &__image {
+      width: 532px;
+      height: 307px;
+    }
+  }
+}
