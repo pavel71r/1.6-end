@@ -1,0 +1,98 @@
+.modal-call {
+  padding: 24px 16px;
+  background-color: $background-second;
+  width: 320px;
+  margin: 0 0 0 auto;
+  height: 100vh;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 100%;
+
+  &-open {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 3;
+  }
+  &__title {
+    padding-top: 32px;
+    padding-bottom: 24px;
+    font-family: TTLakesBold;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+  }
+  &__title::before {
+    content: "";
+    border: 1px solid transparent;
+    width: 2px;
+    height: 38px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    background: $decor-title;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__text {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    width: 288px;
+  }
+  &__form-input {
+    width: 288px;
+    height: 48px;
+    border: 1px solid $decor-light;
+    border-radius: 8px;
+    padding: 10px 20px;
+  }
+  &__form-input::placeholder {
+    color: $bullet-active;
+  }
+  &__text {
+    font-family: TTLakesRegular;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &__text-red {
+    color: $accent;
+  }
+  &__send {
+    position: absolute;
+    right: 16px;
+    top: 305px;
+  }
+}
+@media (min-width: 768px) {
+  .modal-call {
+    width: 440px;
+    padding: 24px 32px;
+    &__title {
+      padding-top: 24px;
+    }
+    &__text {
+      width: 376px;
+    }
+    &__form-input {
+      width: 376px;
+    }
+    &__send {
+      right: 32px;
+      top: 235px;
+    }
+    &__button {
+      position: absolute;
+      left: -80px;
+    }
+  }
+}

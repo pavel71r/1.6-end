@@ -1,0 +1,32 @@
+.title {
+  font-family: TTLakesBold;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  padding-left: 16px;
+  padding-bottom: 24px;
+
+  &::before {
+    content: "";
+    border: 1px solid transparent;
+    width: 2px;
+    height: 38px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    background: $decor-title;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    padding-left: 24px;
+    padding-bottom: 32px;
+  }
+}
+@media (min-width: 1120px) {
+  .title {
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-bottom: 8px;
+  }
+}

@@ -1,0 +1,131 @@
+.aside {
+  width: 320px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  background-color: $background-second;
+  min-height: 100vh;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+
+  &-open {
+    visibility: visible;
+    opacity: 1;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+      16px 0px 52px rgba(14, 24, 80, 0.2);
+  }
+  &__top-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+    padding: 18px 16px;
+  }
+  &__top-item:nth-child(2) {
+    flex-grow: 1;
+  }
+  &__mid-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__mid-item {
+    position: relative;
+    padding-left: 24px;
+  }
+  &__mid-item:hover::before {
+    content: "";
+    width: 2px;
+    height: 32px;
+    border: 1px solid $decor-title;
+    background-color: $decor-title;
+    border-radius: 6px;
+    position: absolute;
+    top: -3px;
+    left: 0px;
+  }
+  &__mid-link:hover {
+    transition: 0.5s;
+    opacity: 0.5;
+    color: $text-light;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    justify-content: flex-end;
+  }
+  &__bottom-list {
+    display: flex;
+    gap: 0 16px;
+    margin: 16px 24px;
+  }
+  &__bottom-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    margin-bottom: 40px;
+    margin-left: 24px;
+  }
+  &__bottom-contacts-link:last-child {
+    font-family: TTLakesBold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+  }
+}
+.lang {
+  display: flex;
+  gap: 0 7px;
+  margin-bottom: 32px;
+  margin-left: 24px;
+}
+.input {
+  visibility: hidden;
+  position: absolute;
+}
+.input:checked + .label {
+  opacity: 0.5;
+}
+.label {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .aside__top-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+    padding: 18px 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .aside {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+
+    &__top-list {
+      padding: 30px 24px 18px;
+    }
+    &__top-item:first-child {
+      display: none;
+    }
+  }
+}
+@media (max-height: 780px) {
+  .aside {
+    &__top-list {
+      margin-bottom: 0px;
+    }
+    &__mid-list {
+      gap: 24px;
+    }
+    &__bottom-contacts {
+      margin-bottom: 8px;
+    }
+  }
+}
